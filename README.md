@@ -113,3 +113,33 @@ Now click Connect to connect to the clicker
 Now browse to the correct folder with the source code in it (LetMeCreateIOT/examples/robot_arm_client). Select the main.hex file
 
 Click Program - the client program will now run until the clicker is erased or reprogrammed.
+
+### Controlling the robot arm using a webapp
+Install git and node.js on the board:
+```
+# Opkg install git
+```
+```
+# Opkg install node
+```
+```
+# Opkg install gcc
+```
+
+Clone the repository somewhere on the board:
+```
+Git clone https://github.com/matthewrfennell/servo_control/
+```
+```
+servo_control/webapp# make
+```
+```
+servo_control/webapp# npm install
+```
+Run `ifconfig` to find the IP address of the board
+```
+servo_control/webapp# npm start
+```
+
+Now, with another device on the same network, open a web browser to access the webpage:
+http://[Ci40 IP Address]:3000
