@@ -1,3 +1,5 @@
+// Code adapted from http://www.tack.ch/unix/network/sockets/udpv6.shtml
+
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
