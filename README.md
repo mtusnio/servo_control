@@ -143,3 +143,8 @@ servo_control/webapp# npm start
 
 Now, with another device on the same network, open a web browser to access the webpage:
 http://[Ci40 IP Address]:3000
+
+## Links
+
+The web app code is modified from [the Relay Web app project.](https://github.com/hugo-santos-imgtec/ci40_relay_webapp).
+The UDP server code is modified from [http://www.tack.ch/unix/network/sockets/udpv6.shtml](http://www.tack.ch/unix/network/sockets/udpv6.shtml)
