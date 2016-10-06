@@ -34,8 +34,8 @@ $ git clone https://github.com/MatthewRFennell/servo_control.git
 
 Inside the local folder:
 Transfer the main.c file to custom/letmecreate/LetMeCreate/examples/robot_arm/
-Transfer the robot_arm.c file to custom/letmecreate/LetMeCreate/src/click/
-Transfer the robot_arm.h file to custom/letmecreate/LetMeCreate/include/click/
+Transfer the robot_arm.c file to custom/letmecreate/LetMeCreate/src/letmecreate/click/
+Transfer the robot_arm.h file to custom/letmecreate/LetMeCreate/include/letmecreate/click/
 Open the CMakeLists.txt file found in custom/letmecreate/LetMeCreate/examples/ and append these lines to the bottom:
 ```
 add_executable(letmecreate_test_robot_arm robot_arm/main.c)
@@ -61,8 +61,8 @@ opkg install ~/letmecreate_0.1_pistachio.ipk
 #### Running the server
 Inside the clicker/server folder:
 Transfer the main.c file to custom/letmecreate/LetMeCreate/examples/robot_arm_server/
-Transfer the robot_arm_server.c file to custom/letmecreate/LetMeCreate/src/click/
-Transfer the robot_arm_server.h file to custom/letmecreate/LetMeCreate/include/click/
+Transfer the robot_arm_server.c file to custom/letmecreate/LetMeCreate/src/letmecreate/click/
+Transfer the robot_arm_server.h file to custom/letmecreate/LetMeCreate/include/letmecreate/click/
 Open the CMakeLists.txt file found in custom/letmecreate/LetMeCreate/examples/ and append these lines to the bottom:
 ```
 add_executable(letmecreate_test_robot_arm_server robot_arm_server/main.c)
