@@ -1,4 +1,4 @@
-#include "click/robot_arm.h"
+#include "letmecreate/click/robot_arm.h"
 
 #define ROBOT_ARM_ADDRESS       (0x40)
 #define LED_ON_LOW              (0x06)

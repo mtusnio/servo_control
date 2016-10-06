@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "click/robot_arm_server.h"
+#include "letmecreate/click/robot_arm_server.h"
 
 #define MAXBUF 65536
 

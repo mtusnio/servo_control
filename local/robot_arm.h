@@ -14,7 +14,7 @@
 
 #include <stdio.h>
 #include <unistd.h>
-#include "letmecreate.h"
+#include "letmecreate/letmecreate.h"
 
 /* Initialises writing to i2c and writes to the mode and prescale registers to allow for servo movement */
 int robot_arm_init(void);
