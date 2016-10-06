@@ -21,6 +21,7 @@ AUTOSTART_PROCESSES(&main_process);
 PROCESS_THREAD(main_process, ev, data){
     PROCESS_BEGIN();{
         static struct uip_udp_conn * conn;
+        static uint8_t value = 0;
         static char buffer[BUFFER_SIZE];
         conn = udp_new_connection(CLIENT_PORT, SERVER_PORT, SERVER_IP_ADDR);
         while(1){
@@ -28,18 +29,11 @@ PROCESS_THREAD(main_process, ev, data){
             i2c_init();
             joystick_click_get_x(&x);
             joystick_click_get_y(&y);
-            static int old_value = 0;
-            if(old_value != button_sensor.value(0)){
-                old_value = button_sensor.value(0);
-                sprintf(buffer, "%i,%i,1     ", ((70 * x) / 98) + 90, ((45 * y) / 98) + 45);
-                udp_packet_send(conn, buffer, strlen(buffer));
-                PROCESS_WAIT_UDP_SENT();
-            }
-            else{
-                sprintf(buffer, "%i,%i,0     ", ((70 * x) / 98) + 90, ((45 * y) / 98) + 45);
-                udp_packet_send(conn, buffer, strlen(buffer));
-                PROCESS_WAIT_UDP_SENT();
-            }
+
+            value = button_sensor.value(0);
+            sprintf(buffer, "%i,%i,%i     ", ((70 * x) / 98) + 90, ((45 * y) / 98) + 45, value);
+            udp_packet_send(conn, buffer, strlen(buffer));
+            PROCESS_WAIT_UDP_SENT();
         }
 }
 PROCESS_END();

@@ -44,11 +44,11 @@ int main(){
         if(sscanf(buffer, "%d,%d,%d", &x, &y, &claw) < 0)
             return -1;
 
-        if(claw == 1 && claw_open == true){
+        if(claw == 1 && claw_open != false){
             server_switch_close_claws();
             claw_open = false;
         }
-        else if(claw == 1 && claw_open == false){
+        else if(claw == 0 && claw_open != true){
             server_switch_open_claws();
             claw_open = true;
         }
