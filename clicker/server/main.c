@@ -5,6 +5,7 @@
 #include <netinet/in.h>
 #include <netdb.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include "click/robot_arm_server.h"
 
